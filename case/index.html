@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+
+</head>
+<body>
+<section class="container mt-5">
+  <h1 id="h1ID">What is BOM & What is DOM</h1>
+  <h1 class="h1Class">What is BOM & What is DOM</h1>
+  <h2 id="h2ID">What really JS DO?</h2>
+  <h2 class="h1Class">What really JS DO?</h2>
+  <hr>
+  <input class="form-control" type="text" name="cusName">
+  <button class="btn btn-danger mt-3">Test</button>
+</section>
+
+
+<script>
+  document.querySelector("h1").addEventListener("click",function(){
+    document.querySelector(".h1Class").remove();
+  });
+
+  document.querySelector("button").addEventListener("click",function(){
+    document.querySelector("#h2ID").innerText = (document.querySelector("input").value)
+  });
+
+</script>
+</body>
+</html>
